@@ -11,7 +11,7 @@ class Button extends React.Component {
   renderButton = color => (
     <button className={`ui button ${color}`}>
       <LanguageContext.Consumer>
-        {value => (value === "english" ? "Submit" : "Indienen") // this function is called with the value inside of the context as an argument
+        {({ language }) => (language === "english" ? "Submit" : "Indienen") // this function is called with the value inside of the context as an argument
         }
       </LanguageContext.Consumer>
     </button>
